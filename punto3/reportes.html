@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes | FinControl</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Menú de la aplicación">
+      <h2>FinControl</h2>
+      <nav aria-label="Opciones">
+        <ul>
+          <li><a href="dashboard.html" >Inicio</a></li>
+          <li><a href="ingresos.html" >Ingresos</a></li>
+          <li><a href="gastos.html" >Gastos</a></li>
+          <li><a href="reportes.html" aria-current="page">Reportes</a></li>
+        </ul>
+      </nav>
+      <a class="salir" href="login.html">Cerrar sesión</a>
+    </aside>
+
+    <main class="contenido">
+      <header>
+        <h1>Reportes</h1>
+        <p>Comparativo de los últimos meses</p>
+      </header>
+
+      <section class="panel" aria-label="Ingresos por mes">
+        <h2>Ingresos por mes</h2>
+        <div class="barras">
+          <div class="barra-fila"><span>Agosto</span><div class="barra"><span style="width:70%"></span></div><span>$ 2.8M</span></div>
+          <div class="barra-fila"><span>Septiembre</span><div class="barra"><span style="width:85%"></span></div><span>$ 3.4M</span></div>
+          <div class="barra-fila"><span>Octubre</span><div class="barra"><span style="width:80%"></span></div><span>$ 3.2M</span></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Gastos por mes">
+        <h2>Gastos por mes</h2>
+        <div class="barras">
+          <div class="barra-fila"><span>Agosto</span><div class="barra rojo"><span style="width:50%"></span></div><span>$ 2.0M</span></div>
+          <div class="barra-fila"><span>Septiembre</span><div class="barra rojo"><span style="width:62%"></span></div><span>$ 2.5M</span></div>
+          <div class="barra-fila"><span>Octubre</span><div class="barra rojo"><span style="width:45%"></span></div><span>$ 1.8M</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

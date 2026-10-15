@@ -1,0 +1,124 @@
+/* ---------- Variables de color (paleta editable) ---------- */
+:root {
+  --crema: #fdf4e3;
+  --azul: #073b63;
+  --rojo: #f04835;
+  --verde: #8cbf8c;
+  --verde-oscuro: #489a68;
+  --turquesa: #1b95a0;
+  --turquesa-claro: #30a09b;
+  --amarillo: #ecac32;
+  --naranja: #f08c20;
+  --rosa: #ff7676;
+  --vino: #8a3a50;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #e9e2d2;
+  font-family: Arial, sans-serif;
+}
+
+.lienzo {
+  width: min(92vw, 640px);
+  aspect-ratio: 1 / 1;
+  background: var(--crema);
+  padding: 4.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+}
+
+.barra {
+  height: 8%;
+  background: var(--azul);
+  border-radius: 3px;
+}
+
+/* Grid: 3 columnas iguales, 3 filas iguales */
+.rejilla {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4%;
+}
+
+.celda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+/* Colores de fondo */
+.rojo     { background: var(--rojo); }
+.verde    { background: var(--verde); }
+.amarillo { background: var(--amarillo); }
+.turquesa { background: var(--turquesa); }
+.vacia    { background: transparent; }
+
+/* Rombo: un cuadrado girado 45° */
+.rombo-exterior {
+  width: 52%; aspect-ratio: 1/1;
+  background: var(--turquesa);
+  transform: rotate(45deg);
+  display: grid; place-items: center;
+  border-radius: 3px;
+}
+.rombo-interior {
+  width: 58%; aspect-ratio: 1/1;
+  background: var(--naranja);
+  border-radius: 3px;
+}
+
+/* Marco blanco con cuadro interior */
+.marco {
+  width: 68%; aspect-ratio: 1/1;
+  background: var(--crema);
+  display: grid; place-items: center;
+  border-radius: 3px;
+}
+.cuadro { width: 66%; aspect-ratio: 1/1; border-radius: 3px; }
+.cuadro.rojo { background: var(--rojo); }
+.cuadro.turquesa-claro { background: var(--turquesa-claro); }
+.cuadro.verde-oscuro { background: var(--verde-oscuro); }
+
+/* Círculos */
+.circulo { width: 82%; aspect-ratio: 1/1; border-radius: 50%; }
+.circulo.vino { background: var(--vino); }
+.circulo.naranja { background: var(--naranja); width: 72%; }
+
+/* Columna de barras */
+.celda.barras {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  align-self: start;
+  height: 125%;
+  background: transparent;
+}
+.barra-n { background: var(--naranja); border-radius: 2px; }
+.barra-n.grande  { height: 38%; }
+.barra-n.delgada { height: 12%; }
+.barra-r { background: var(--rosa); height: 12%; border-radius: 2px; }
+
+.celda.turquesa.bajo {
+  height: 89%;       /* menos alto que su celda */
+  align-self: end;   /* pegado abajo: se acorta desde arriba */
+}
+
+.celda.turquesa.bajo .marco {
+  width: 66%;
+  height: 64%;
+  aspect-ratio: auto;   /* quita la regla de cuadrado */
+}
+.celda.turquesa.bajo .cuadro {
+  width: 72%;
+  height: 67%;
+  aspect-ratio: auto;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | FinControl</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Menú de la aplicación">
+      <h2>FinControl</h2>
+      <nav aria-label="Opciones">
+        <ul>
+          <li><a href="dashboard.html" aria-current="page">Inicio</a></li>
+          <li><a href="ingresos.html" >Ingresos</a></li>
+          <li><a href="gastos.html" >Gastos</a></li>
+          <li><a href="reportes.html" >Reportes</a></li>
+        </ul>
+      </nav>
+      <a class="salir" href="login.html">Cerrar sesión</a>
+    </aside>
+
+    <main class="contenido">
+      <header>
+        <h1>Inicio</h1>
+        <p>Resumen de octubre de 2026</p>
+      </header>
+
+      <section class="tarjetas" aria-label="Resumen financiero">
+        <div class="tarjeta"><h2>Saldo total</h2><p class="valor">$ 4.850.000</p></div>
+        <div class="tarjeta ingreso"><h2>Ingresos del mes</h2><p class="valor">$ 3.200.000</p></div>
+        <div class="tarjeta gasto"><h2>Gastos del mes</h2><p class="valor">$ 1.780.000</p></div>
+        <div class="tarjeta"><h2>Ahorro del mes</h2><p class="valor">$ 1.420.000</p></div>
+      </section>
+
+      <section class="panel" aria-label="Últimos movimientos">
+        <h2>Últimos movimientos</h2>
+        <table>
+          <thead><tr><th>Fecha</th><th>Descripción</th><th>Monto</th></tr></thead>
+          <tbody>
+            <tr><td>10 oct</td><td>Pago de nómina</td><td class="pos">+ $ 3.200.000</td></tr>
+            <tr><td>09 oct</td><td>Mercado</td><td class="neg">- $ 320.000</td></tr>
+            <tr><td>07 oct</td><td>Arriendo</td><td class="neg">- $ 900.000</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

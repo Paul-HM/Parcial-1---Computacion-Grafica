@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresos | FinControl</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Menú de la aplicación">
+      <h2>FinControl</h2>
+      <nav aria-label="Opciones">
+        <ul>
+          <li><a href="dashboard.html" >Inicio</a></li>
+          <li><a href="ingresos.html" aria-current="page">Ingresos</a></li>
+          <li><a href="gastos.html" >Gastos</a></li>
+          <li><a href="reportes.html" >Reportes</a></li>
+        </ul>
+      </nav>
+      <a class="salir" href="login.html">Cerrar sesión</a>
+    </aside>
+
+    <main class="contenido">
+      <header>
+        <h1>Ingresos</h1>
+        <p>Registra y consulta tus ingresos</p>
+      </header>
+
+      <section class="panel" aria-label="Nuevo ingreso">
+        <h2>Registrar ingreso</h2>
+        <form class="formulario" action="#">
+          <div class="campo"><label for="i-desc">Descripción</label><input type="text" id="i-desc" placeholder="Ej: Nómina"></div>
+          <div class="campo"><label for="i-monto">Monto</label><input type="number" id="i-monto" placeholder="0"></div>
+          <div class="campo"><label for="i-fecha">Fecha</label><input type="date" id="i-fecha"></div>
+          <button type="button" class="boton">Guardar ingreso</button>
+        </form>
+      </section>
+
+      <section class="panel" aria-label="Lista de ingresos">
+        <h2>Ingresos del mes</h2>
+        <table>
+          <thead><tr><th>Fecha</th><th>Descripción</th><th>Monto</th></tr></thead>
+          <tbody>
+            <tr><td>10 oct</td><td>Pago de nómina</td><td class="pos">$ 3.000.000</td></tr>
+            <tr><td>05 oct</td><td>Trabajo freelance</td><td class="pos">$ 200.000</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

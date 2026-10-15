@@ -1,0 +1,104 @@
+:root {
+  --verde: #0f766e;
+  --verde-oscuro: #0b3d3a;
+  --fondo: #f1f5f4;
+  --texto: #14272a;
+  --suave: #5b6f72;
+  --ingreso: #15803d;
+  --gasto: #c2410c;
+  --blanco: #fff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", Roboto, Arial, sans-serif; color: var(--texto); background: var(--fondo); }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 3px solid #1a73e8; outline-offset: 2px; }
+
+/* ================= LOGIN (Flexbox) ================= */
+.login-body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* centra horizontal */
+  align-items: center;       /* centra vertical */
+  background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+  padding: 20px;
+}
+.login {
+  width: 100%; max-width: 380px;
+  background: var(--blanco);
+  padding: 32px;
+  border-radius: 12px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.login h1 { font-size: 1.6rem; }
+.login p { color: var(--suave); }
+.login form { display: flex; flex-direction: column; gap: 14px; }
+.campo { display: flex; flex-direction: column; gap: 6px; font-size: .9rem; }
+.campo input {
+  padding: 11px; border: 1px solid #b6c4c6; border-radius: 6px; font-size: 1rem;
+}
+.boton {
+  display: block; text-align: center; border: 0; cursor: pointer;
+  background: var(--verde); color: #fff; padding: 12px; border-radius: 6px;
+  font-size: 1rem; font-weight: 600;
+}
+.boton:hover { background: var(--verde-oscuro); }
+
+/* ================= DASHBOARD ================= */
+.app { min-height: 100vh; display: flex; }
+
+/* Sidebar (aside) */
+.sidebar {
+  width: 230px; background: var(--verde-oscuro); color: #fff;
+  padding: 24px 16px; display: flex; flex-direction: column; gap: 24px;
+}
+.sidebar h2 { font-size: 1.2rem; padding: 0 10px; }
+.sidebar ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.sidebar a { display: block; padding: 10px 12px; border-radius: 6px; }
+.sidebar a:hover { background: rgba(255,255,255,.12); }
+.sidebar a[aria-current="page"] { background: var(--verde); font-weight: 600; }
+.sidebar .salir { margin-top: auto; color: #bfe3df; font-size: .9rem; }
+
+/* Área principal */
+.contenido { flex: 1; padding: 28px; display: flex; flex-direction: column; gap: 24px; }
+.contenido > header h1 { font-size: 1.6rem; }
+.contenido > header p { color: var(--suave); }
+
+/* Tarjetas con GRID */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+.tarjeta { background: var(--blanco); padding: 20px; border-radius: 10px; border-left: 6px solid var(--verde); }
+.tarjeta h2 { font-size: .95rem; color: var(--suave); font-weight: 500; }
+.tarjeta .valor { font-size: 1.8rem; font-weight: 700; margin-top: 6px; }
+.tarjeta.ingreso { border-color: var(--ingreso); } .tarjeta.ingreso .valor { color: var(--ingreso); }
+.tarjeta.gasto   { border-color: var(--gasto); }   .tarjeta.gasto .valor   { color: var(--gasto); }
+
+/* Tablas y paneles de las demás vistas */
+.panel { background: var(--blanco); padding: 20px; border-radius: 10px; overflow-x: auto; }
+.panel h2 { font-size: 1.1rem; margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; min-width: 420px; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid #e3eaea; }
+th { color: var(--suave); font-weight: 600; font-size: .9rem; }
+.pos { color: var(--ingreso); font-weight: 600; } .neg { color: var(--gasto); font-weight: 600; }
+
+.formulario { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; align-items: end; }
+.formulario .boton { height: 44px; }
+.formulario select { padding: 11px; border: 1px solid #b6c4c6; border-radius: 6px; font-size: 1rem; background: #fff; }
+
+/* Reportes: barras hechas solo con CSS */
+.barras { display: flex; flex-direction: column; gap: 12px; }
+.barra-fila { display: grid; grid-template-columns: 110px 1fr 90px; align-items: center; gap: 10px; }
+.barra { background: #e3eaea; border-radius: 6px; height: 18px; overflow: hidden; }
+.barra span { display: block; height: 100%; background: var(--verde); }
+.barra.rojo span { background: var(--gasto); }
+
+@media (max-width: 720px) {
+  .app { flex-direction: column; }
+  .sidebar { width: 100%; padding: 14px; }
+  .sidebar ul { flex-direction: row; flex-wrap: wrap; }
+  .sidebar .salir { margin-top: 0; }
+  .barra-fila { grid-template-columns: 80px 1fr 80px; }
+}

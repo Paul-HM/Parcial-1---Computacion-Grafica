@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | FinControl</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <main class="login">
+    <header>
+      <h1>FinControl</h1>
+      <p>Ingresa para ver tus finanzas.</p>
+    </header>
+
+    <form action="dashboard.html" method="get">
+      <div class="campo">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Tu usuario" autocomplete="username">
+      </div>
+      <div class="campo">
+        <label for="clave">Contraseña</label>
+        <input type="password" id="clave" name="clave" placeholder="Tu contraseña" autocomplete="current-password">
+      </div>
+      <button type="submit" class="boton">Ingresar</button>
+    </form>
+  </main>
+</body>
+</html>
