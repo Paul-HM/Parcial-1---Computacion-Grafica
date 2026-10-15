@@ -1,4 +1,3 @@
-/* ---------- Variables de color (paleta editable) ---------- */
 :root {
   --crema: #fdf4e3;
   --azul: #073b63;
@@ -39,7 +38,6 @@ body {
   border-radius: 3px;
 }
 
-/* Grid: 3 columnas iguales, 3 filas iguales */
 .rejilla {
   flex: 1;
   display: grid;
@@ -55,14 +53,12 @@ body {
   border-radius: 3px;
 }
 
-/* Colores de fondo */
 .rojo     { background: var(--rojo); }
 .verde    { background: var(--verde); }
 .amarillo { background: var(--amarillo); }
 .turquesa { background: var(--turquesa); }
 .vacia    { background: transparent; }
 
-/* Rombo: un cuadrado girado 45° */
 .rombo-exterior {
   width: 52%; aspect-ratio: 1/1;
   background: var(--turquesa);
@@ -76,7 +72,6 @@ body {
   border-radius: 3px;
 }
 
-/* Marco blanco con cuadro interior */
 .marco {
   width: 68%; aspect-ratio: 1/1;
   background: var(--crema);
@@ -88,12 +83,10 @@ body {
 .cuadro.turquesa-claro { background: var(--turquesa-claro); }
 .cuadro.verde-oscuro { background: var(--verde-oscuro); }
 
-/* Círculos */
 .circulo { width: 82%; aspect-ratio: 1/1; border-radius: 50%; }
 .circulo.vino { background: var(--vino); }
 .circulo.naranja { background: var(--naranja); width: 72%; }
 
-/* Columna de barras */
 .celda.barras {
   flex-direction: column;
   justify-content: space-between;
@@ -108,14 +101,14 @@ body {
 .barra-r { background: var(--rosa); height: 12%; border-radius: 2px; }
 
 .celda.turquesa.bajo {
-  height: 89%;       /* menos alto que su celda */
-  align-self: end;   /* pegado abajo: se acorta desde arriba */
+  height: 89%;    
+  align-self: end; 
 }
 
 .celda.turquesa.bajo .marco {
   width: 66%;
   height: 64%;
-  aspect-ratio: auto;   /* quita la regla de cuadrado */
+  aspect-ratio: auto;
 }
 .celda.turquesa.bajo .cuadro {
   width: 72%;
