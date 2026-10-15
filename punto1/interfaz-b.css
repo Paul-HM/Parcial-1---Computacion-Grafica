@@ -22,7 +22,6 @@ body {
 
 .app { width: min(96vw, 1300px); }
 
-/* NAVBAR: Flexbox con items de ancho diferente */
 .navbar {
   background: var(--oscuro);
   display: flex;
@@ -43,7 +42,6 @@ body {
 .w1 { flex: 3; } .w2 { flex: 1.2; } .w3 { flex: 3; }
 .w4 { flex: 1.5; } .w5 { flex: 1.5; }
 
-/* CUERPO: tarjetas (izq.) + panel (der.) */
 .cuerpo {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -62,7 +60,6 @@ body {
   border-radius: 3px;
 }
 
-/* PANEL OSCURO */
 .panel {
   background: var(--panel);
   padding: 36px 32px 20px; 
@@ -85,7 +82,6 @@ body {
 
 .avatar { width: 130px; height: 130px; border-radius: 50%; background: var(--avatar); margin-top: 40px; margin-right: 40px; }
 
-/* Líneas que simulan código: alineadas a la derecha */
 .codigo {
   margin-top: 20px;
   display: flex;
@@ -95,10 +91,10 @@ body {
 .c {
   display: block;
   height: 14px;
-  margin-bottom: 24px;     /* separación entre líneas, aquí y no en gap */
+  margin-bottom: 24px;    
   border-radius: 3px;
   flex-shrink: 0; 
-  margin-right: 22px;      /* evita que el flex las aplaste */
+  margin-right: 22px;    
 }
 .salmon   { background: var(--salmon); }
 .amarillo { background: var(--amarillo); }
