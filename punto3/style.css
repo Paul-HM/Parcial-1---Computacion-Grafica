@@ -18,8 +18,8 @@ a { color: inherit; text-decoration: none; }
 .login-body {
   min-height: 100vh;
   display: flex;
-  justify-content: center;   /* centra horizontal */
-  align-items: center;       /* centra vertical */
+  justify-content: center;   
+  align-items: center;   
   background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
   padding: 20px;
 }
@@ -47,7 +47,6 @@ a { color: inherit; text-decoration: none; }
 /* ================= DASHBOARD ================= */
 .app { min-height: 100vh; display: flex; }
 
-/* Sidebar (aside) */
 .sidebar {
   width: 230px; background: var(--verde-oscuro); color: #fff;
   padding: 24px 16px; display: flex; flex-direction: column; gap: 24px;
@@ -88,7 +87,7 @@ th { color: var(--suave); font-weight: 600; font-size: .9rem; }
 .formulario .boton { height: 44px; }
 .formulario select { padding: 11px; border: 1px solid #b6c4c6; border-radius: 6px; font-size: 1rem; background: #fff; }
 
-/* Reportes: barras hechas solo con CSS */
+/* Reportes */
 .barras { display: flex; flex-direction: column; gap: 12px; }
 .barra-fila { display: grid; grid-template-columns: 110px 1fr 90px; align-items: center; gap: 10px; }
 .barra { background: #e3eaea; border-radius: 6px; height: 18px; overflow: hidden; }
